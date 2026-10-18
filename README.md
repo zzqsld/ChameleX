@@ -56,10 +56,14 @@ cd ChameleX
 .\gradlew.bat :app:assembleDebug
 ```
 
-APK 输出路径：
+APK 输出路径（每种 ABI 单独一个 APK）：
 
 ```text
-app/build/outputs/apk/debug/app-debug.apk
+app/build/outputs/apk/debug/
+  app-arm64-v8a-debug.apk
+  app-armeabi-v7a-debug.apk
+  app-x86-debug.apk
+  app-x86_64-debug.apk
 ```
 
 安装到已连接的 Android 设备：
