@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChameleX</string>
+
+    <!-- 底部导航 -->
+    <string name="tab_reader">读卡器</string>
+    <string name="tab_slots">卡槽管理</string>
+    <string name="tab_data">数据管理</string>
+    <string name="tab_keys">密钥管理</string>
+    <string name="tab_settings">设置</string>
+
+    <!-- 占位页 -->
+
+    <!-- 连接状态栏 -->
+    <string name="conn_disconnected">未连接</string>
+    <string name="conn_connecting">连接中…</string>
+    <string name="conn_connecting_fmt">%1$s 连接中…</string>
+    <string name="conn_error">连接异常</string>
+    <string name="transport_ble">蓝牙</string>
+    <string name="transport_usb">USB</string>
+    <string name="battery_unknown">电量未知</string>
+
+    <!-- 设置 / 连接页 -->
+    <string name="settings_connection_title">设备连接</string>
+    <string name="ble_section">蓝牙设备</string>
+    <string name="ble_scan">扫描</string>
+    <string name="ble_scan_stop">停止扫描</string>
+    <string name="ble_scanning">正在扫描 Chameleon 设备…</string>
+    <string name="ble_empty">未发现设备，请确认设备已开机并处于可连接状态</string>
+    <string name="ble_permission_required">需要授予蓝牙权限才能扫描和连接设备</string>
+    <string name="usb_section">USB 设备</string>
+    <string name="usb_refresh">刷新列表</string>
+    <string name="usb_empty">未检测到 USB 设备，请通过 OTG 线连接变色龙后刷新</string>
+    <string name="connected_device">已连接设备</string>
+    <string name="disconnect">断开连接</string>
+    <string name="device_model">型号</string>
+    <string name="device_fw_version">固件版本</string>
+    <string name="device_git_version">Git 版本</string>
+    <string name="device_chip_id">芯片 ID</string>
+    <string name="device_battery">电量</string>
+    <string name="device_mode">工作模式</string>
+    <string name="device_mode_reader">读卡器模式</string>
+    <string name="device_mode_emulator">模拟卡模式</string>
+    <string name="battery_percent_fmt">%1$d%%（%2$d mV）</string>
+    <string name="rssi_fmt">%1$d dBm</string>
+    <string name="device_info_loading">正在读取设备信息…</string>
+    <string name="device_link_type">连接方式</string>
+
+    <!-- 卡槽管理 -->
+    <string name="slots_not_connected">请先在设置页连接设备</string>
+    <string name="slots_loading">正在读取卡槽信息…</string>
+    <string name="slot_title_fmt">卡槽 %1$d</string>
+    <string name="slot_active">激活</string>
+    <string name="slot_hf_label">HF</string>
+    <string name="slot_lf_label">LF</string>
+    <string name="slot_enabled">已启用</string>
+    <string name="slot_disabled">已禁用</string>
+    <string name="slot_more">更多操作</string>
+    <string name="slot_detail_title">卡槽详情</string>
+    <string name="slot_back">返回</string>
+    <string name="nick_modify">修改昵称</string>
+    <string name="nick_dialog_title_fmt">修改 %1$s 昵称</string>
+    <string name="nick_clear">清除昵称</string>
+    <string name="nick_too_long">昵称过长（UTF-8 编码后不能超过 32 字节）</string>
+    <string name="delete_hf_data">删除 HF 数据</string>
+    <string name="delete_lf_data">删除 LF 数据</string>
+    <string name="delete_confirm_title">确认删除</string>
+    <string name="delete_confirm_msg_fmt">将删除卡槽 %1$d 的 %2$s 配置数据，是否继续？</string>
+    <string name="reset_button">重置为默认卡型</string>
+    <string name="reset_pick_title">选择卡型</string>
+    <string name="reset_confirm_title">危险操作</string>
+    <string name="reset_confirm_msg_fmt">将把卡槽 %1$d 重置为「%2$s」的默认数据，该槽原有数据将被清空并写入 flash，此操作不可撤销！</string>
+    <string name="emu_config_entry">高级设置</string>
+    <string name="common_confirm">确认</string>
+    <string name="common_cancel">取消</string>
+    <string name="op_failed_fmt">%1$s失败：%2$s</string>
+    <string name="op_read_slots">读取卡槽</string>
+    <string name="op_activate_slot">切换卡槽</string>
+    <string name="op_set_enable">设置启用状态</string>
+    <string name="op_set_nick">修改昵称</string>
+    <string name="op_delete_sense">删除数据</string>
+    <string name="op_reset_slot">重置卡槽</string>
+    <string name="op_emu_config">设置模拟参数</string>
+    <string name="device_not_connected">设备未连接</string>
+
+    <!-- 模拟参数页 -->
+    <string name="emu_title">高级设置</string>
+    <string name="emu_loading">正在读取模拟参数…</string>
+    <string name="emu_unsupported">当前卡槽无可配置的模拟参数</string>
+    <string name="emu_gen1a">模拟为UID卡</string>
+    <string name="emu_gen1a_desc">Gen1A 魔术卡模式：允许通过 Gen1A 后门指令直接改写卡片数据</string>
+    <string name="emu_gen2">模拟为CUID卡</string>
+    <string name="emu_gen2_desc">Block0（UID 块）可像普通块一样被写入</string>
+    <string name="emu_anticoll">防UID检测</string>
+    <string name="emu_anticoll_desc">防冲突阶段上报的 UID 直接取自 0 块数据，与认证后读到的 0 块 UID 永远一致，可骗过比对两次 UID 的高级闸机检测</string>
+    <string name="emu_write_mode">写入模式</string>
+    <string name="write_mode_normal">正常写入</string>
+    <string name="write_mode_normal_desc">标准行为，写入即生效</string>
+    <string name="write_mode_denied">只读锁定</string>
+    <string name="write_mode_denied_desc">拒绝一切写入，模拟只读卡</string>
+    <string name="write_mode_deceive">假装修改</string>
+    <string name="write_mode_deceive_desc">骗过先测试卡片可写性再决定信不信任的读卡器——报告写成功但不实际保存</string>
+    <string name="write_mode_shadow">临时写入（断电恢复）</string>
+    <string name="write_mode_shadow_desc">写入只保存在内存，断电后恢复原数据</string>
+    <string name="emu_uid_magic">模拟Ultralight魔术卡</string>
+    <string name="emu_uid_magic_desc">允许修改卡片的 UID（Ultralight/NTAG 系）</string>
+    <string name="emu_detection">侦测模式</string>
+    <string name="emu_detection_desc">记录读卡器对模拟卡的认证日志，用于事后反推密钥（阶段 6）</string>
+    <string name="emu_apply_failed_fmt">设置失败：%1$s</string>
+
+    <!-- 卡型显示名 -->
+    <string name="tag_type_empty">空</string>
+    <string name="tag_type_unknown">未知</string>
+    <string name="tag_type_old">旧卡型，需升级固件迁移</string>
+    <string name="tag_type_em410x">EM410X</string>
+    <string name="tag_type_em410x_16">EM410X/16</string>
+    <string name="tag_type_em410x_32">EM410X/32</string>
+    <string name="tag_type_em410x_64">EM410X/64</string>
+    <string name="tag_type_em410x_electra">EM410X Electra</string>
+    <string name="tag_type_pac">PAC/Stanley</string>
+    <string name="tag_type_viking">Viking</string>
+    <string name="tag_type_jablotron">Jablotron</string>
+    <string name="tag_type_hidprox">HIDProx</string>
+    <string name="tag_type_ioprox">ioProx</string>
+    <string name="tag_type_idteck">IDTECK</string>
+    <string name="tag_type_mifare_mini">MIFARE Mini</string>
+    <string name="tag_type_mifare_1024">MIFARE Classic 1K</string>
+    <string name="tag_type_mifare_2048">MIFARE Classic 2K</string>
+    <string name="tag_type_mifare_4096">MIFARE Classic 4K</string>
+    <string name="tag_type_ntag213">NTAG 213</string>
+    <string name="tag_type_ntag215">NTAG 215</string>
+    <string name="tag_type_ntag216">NTAG 216</string>
+    <string name="tag_type_ntag210">NTAG 210</string>
+    <string name="tag_type_ntag212">NTAG 212</string>
+    <string name="tag_type_mful">MIFARE Ultralight</string>
+    <string name="tag_type_mfulc">MIFARE Ultralight C</string>
+    <string name="tag_type_mful11">MIFARE Ultralight EV1 (640bit)</string>
+    <string name="tag_type_mful21">MIFARE Ultralight EV1 (1312bit)</string>
+    <string name="tag_type_hf14a_4">ISO14443-4 (T=CL)</string>
+    <string name="tag_type_seos">SEOS</string>
+
+    <!-- 读卡器 -->
+    <string name="reader_scan_start">开始扫描</string>
+    <string name="reader_scanning">扫描中，请将卡片靠近设备…（IC 卡贴 LED 灯面，ID 卡贴按键面）</string>
+    <string name="reader_scan_hint">IC 卡（13.56MHz）感应区在 LED 灯一面，ID 卡（125kHz）感应区在按键一面，放错面会读不到</string>
+    <string name="reader_no_tag">未发现卡片，请重试（注意 IC 卡贴 LED 灯面、ID 卡贴按键面，放错面读不到）</string>
+    <string name="reader_not_connected">请先在设置页连接设备</string>
+    <string name="reader_result_title">扫描结果</string>
+    <string name="reader_uid">UID</string>
+    <string name="reader_card_type">卡型</string>
+    <string name="reader_lf_id">ID</string>
+    <string name="reader_hid_format">格式</string>
+    <string name="reader_hid_fc">FC（设施码）</string>
+    <string name="reader_hid_cn">CN（卡号）</string>
+    <string name="reader_hid_bits_fmt">%1$s（%2$d 位）</string>
+    <string name="card_kind_mfc_1k">MIFARE Classic 1K</string>
+    <string name="card_kind_mfc_4k">MIFARE Classic 4K</string>
+    <string name="card_kind_mfc_mini">MIFARE Classic Mini</string>
+    <string name="card_kind_ul_ntag">Ultralight / NTAG 系</string>
+    <string name="card_kind_cpu">ISO14443-4 / CPU 卡</string>
+    <string name="card_kind_unknown_14a">未知 14A 卡</string>
+    <string name="card_hint_mfc">支持自动解密（后续版本）</string>
+    <string name="card_hint_ul_ntag">该卡型不支持自动解密，但支持模拟</string>
+    <string name="card_hint_cpu">该卡型不支持自动解密</string>
+    <string name="card_hint_14b_15693">提示：14B/15693 卡设备固件不支持扫描</string>
+    <string name="scan_failed_fmt">扫描失败：%1$s</string>
+    <string name="scan_lite_no_reader">当前设备（Lite）不支持读卡器模式，无法扫描</string>
+
+    <!-- 字典攻击 / dump（3b） -->
+    <string name="attack_button">检测密钥并读取全卡</string>
+    <string name="attack_pick_dict">选择字典</string>
+    <string name="attack_quick">快速检测（前 50 个常用密钥）</string>
+    <string name="attack_full">完整字典（全部密钥，较慢）</string>
+    <string name="attack_stage_check">正在检测密钥，请勿移动卡片…</string>
+    <string name="attack_stage_dump">正在读取卡片数据，请勿移动卡片…</string>
+    <string name="attack_progress_keys">已检测 %1$d/%2$d 个密钥</string>
+    <string name="attack_progress_found">已命中 %1$d 个密钥</string>
+    <string name="attack_progress_blocks">已读取 %1$d/%2$d 块</string>
+    <string name="attack_elapsed">耗时 %1$d 秒</string>
+    <string name="attack_eta_fmt">预计本阶段最长约 %1$d 秒</string>
+    <string name="attack_cancel">取消</string>
+    <string name="attack_waiting_device">设备正在检测本批密钥（检测时设备白灯闪烁，属正常现象）…</string>
+    <string name="attack_cancelled">已取消</string>
+    <string name="attack_card_lost">卡片离开感应区，请放回原位后重试</string>
+    <string name="attack_failed">读取失败：%1$s</string>
+    <string name="attack_result_title">读取结果</string>
+    <string name="attack_sector_keys">扇区密钥</string>
+    <string name="attack_dump_blocks">卡片数据</string>
+    <string name="key_unknown">未知</string>
+    <string name="sector_fmt">扇区 %1$d</string>
+    <string name="block_fmt">块 %1$d</string>
+    <string name="dump_saved">已保存到数据管理</string>
+    <string name="dump_save_failed">保存失败</string>
+    <string name="dump_saved_mark">已保存</string>
+
+    <!-- 数据管理 -->
+    <string name="data_empty">暂无保存的 dump</string>
+    <string name="data_source_dict_attack">字典攻击</string>
+    <string name="data_source_import">导入</string>
+    <string name="data_time_fmt">%1$tY-%1$tm-%1$td %1$tH:%1$tM</string>
+    <string name="data_detail_title">dump 预览</string>
+    <string name="data_source_label">来源</string>
+    <string name="data_time_label">时间</string>
+    <string name="data_delete">删除</string>
+    <string name="data_block_count_fmt">共 %1$d 块</string>
+    <string name="mfc_type_1k">MIFARE Classic 1K</string>
+    <string name="mfc_type_4k">MIFARE Classic 4K</string>
+    <string name="mfc_type_mini">MIFARE Classic Mini</string>
+    <string name="mfc_type_2k">MIFARE Classic 2K</string>
+    <string name="mfc_type_unknown">MIFARE Classic</string>
+
+    <!-- 自动破解（3c） -->
+    <string name="autopwn_button">一键自动解密</string>
+    <string name="autopwn_stage_dict">阶段 1/4：字典检测</string>
+    <string name="autopwn_stage_darkside">Darkside 采集破解首钥（第 %1$s 轮）</string>
+    <string name="autopwn_stage_nested">Nested 破解扇区 %1$s</string>
+    <string name="autopwn_stage_staticnested">StaticNested 破解扇区 %1$s</string>
+    <string name="autopwn_stage_hardnested">HardNested 暴力破解 %1$s</string>
+    <string name="autopwn_stage_hn_acquire">HardNested 采集随机数 MSB %1$s</string>
+    <string name="autopwn_stage_cracking">破解剩余密钥</string>
+    <string name="autopwn_stage_dump">读取卡片数据 %1$s</string>
+    <string name="autopwn_keys_progress">已破解密钥 %1$d/%2$d</string>
+    <string name="autopwn_attempts">尝试次数 %1$d</string>
+    <string name="autopwn_not_m1">仅支持 MIFARE Classic 卡</string>
+    <string name="autopwn_no_first_key">无法获得首个密钥（非默认密钥且 Darkside 失败），请尝试完整字典</string>
+    <string name="autopwn_darkside_fail">Darkside 破解失败：%1$s</string>
+    <string name="autopwn_cancelled">已取消</string>
+
+    <!-- 固件升级（DFU） -->
+    <string name="fw_entry">固件升级</string>
+    <string name="fw_title">固件升级</string>
+    <string name="fw_current_device">当前设备</string>
+    <string name="fw_dfu_device_badge">恢复模式</string>
+    <string name="fw_source_github">从 GitHub 官方仓库获取</string>
+    <string name="fw_source_local">选择本地固件包（.zip）</string>
+    <string name="fw_load_release">获取最新版本信息</string>
+    <string name="fw_release_version">最新版本：%1$s</string>
+    <string name="fw_release_date">发布日期：%1$s</string>
+    <string name="fw_release_notes">更新日志</string>
+    <string name="fw_download">下载固件（%1$s）</string>
+    <string name="fw_downloading">下载中 %1$d%%（%2$.1f / %3$.1f MB）</string>
+    <string name="fw_download_cancel">取消下载</string>
+    <string name="fw_file_ready">固件包就绪：%1$s</string>
+    <string name="fw_flash_button">开始刷机</string>
+    <string name="fw_flash_dfu_button">刷入固件</string>
+    <string name="fw_exit_dfu">退出刷机模式</string>
+    <string name="fw_exit_dfu_hint">如设备未自动重启，请按设备电源键重启即可退出刷机模式</string>
+    <string name="fw_confirm_title">刷机风险确认</string>
+    <string name="fw_confirm_msg">即将向设备刷入新固件：\n\n· 当前固件：%1$s\n· 目标固件：%2$s\n\n刷机过程中请勿断电、勿远离手机、勿操作设备按键。刷写失败一般不会变砖，可重新刷写。确认继续？</string>
+    <string name="fw_enter_bootloader">正在重启设备进入刷机模式…</string>
+    <string name="fw_waiting_dfu">等待设备进入刷机模式（CU/CL）…</string>
+    <string name="fw_flashing">正在刷写固件，请勿离开此页面、勿断电</string>
+    <string name="fw_progress_part">部分 %1$d/%2$d</string>
+    <string name="fw_progress_speed">速度 %1$.1f KB/s</string>
+    <string name="fw_done">刷机完成！设备正在重启，请到设置页重新连接</string>
+    <string name="fw_aborted">刷机已中止，设备已复位，可重新刷写</string>
+    <string name="fw_cancel_flash">中止刷机</string>
+    <string name="fw_back">返回</string>
+    <string name="dfu_not_found">未找到刷机模式的设备，请手动重启设备后重试</string>
+    <string name="dfu_enter_failed">进入刷机模式失败：%1$s</string>
+    <string name="fw_error_fmt">刷机失败：%1$s</string>
+    <string name="fw_need_device">请先连接设备，或在设置页选择恢复模式设备</string>
+
+    <!-- 数据管理（阶段 4） -->
+    <string name="import_dump">导入 dump</string>
+    <string name="import_success">导入成功</string>
+    <string name="import_failed">导入失败（不支持的格式或文件损坏）</string>
+    <string name="export_dump">导出</string>
+    <string name="export_format_title">选择导出格式</string>
+    <string name="rename">重命名</string>
+    <string name="rename_dialog_title">重命名</string>
+    <string name="data_source_crack">侦测破解</string>
+    <string name="data_source_scan">扫描</string>
+    <string name="write_to_slot">保存到设备卡槽</string>
+    <string name="write_to_slot_title">选择目标卡槽</string>
+    <string name="write_slot_progress">正在写入卡槽 %1$d/%2$d 块</string>
+    <string name="write_lf_progress">正在写入卡槽</string>
+    <string name="write_card_progress">正在写入卡片 %1$d/%2$d 块</string>
+    <string name="write_failed">写入失败：%1$s</string>
+    <string name="write_done_ok">写入完成，回读校验一致</string>
+    <string name="write_done_mismatch_fmt">写入完成，%1$d 个块校验不一致</string>
+    <string name="write_magic_card">写入实体魔术卡</string>
+    <string name="magic_pick_title">选择魔术卡类型</string>
+    <string name="magic_gen1a">Gen1A（后门指令卡，如 CUID）</string>
+    <string name="magic_gen2">Gen2（直接块写卡，如 FUID/UFUID）</string>
+    <string name="magic_danger_title">危险操作</string>
+    <string name="magic_danger_msg">此操作将覆盖实体卡数据，可能使卡片变砖！\n\n请确认：\n· 卡片已放在设备感应区（LED 面）\n· 卡片是可写魔术卡\n· 写入过程中不要移动卡片</string>
+    <string name="edit_invalid_hex">必须是 32 位十六进制字符</string>
+    <string name="block0_badge">厂商块/UID</string>
+    <string name="common_save">保存</string>
+    <string name="common_ok">确定</string>
+    <string name="save_to_data">保存到数据管理</string>
+    <string name="save_to_slot">保存到设备卡槽</string>
+    <string name="lf_write_done">ID 已写入当前卡槽</string>
+    <string name="lf_saved">已保存到数据管理</string>
+
+    <!-- 硬件设置 -->
+    <string name="hw_section">硬件设置</string>
+    <string name="hw_animation">动画模式</string>
+    <string name="hw_btn_a_short">按键 A 短按</string>
+    <string name="hw_btn_b_short">按键 B 短按</string>
+    <string name="hw_btn_a_long">按键 A 长按</string>
+    <string name="hw_btn_b_long">按键 B 长按</string>
+    <string name="anim_full">全动画</string>
+    <string name="anim_minimal">精简动画</string>
+    <string name="anim_none">关动画</string>
+    <string name="anim_symmetric">对称动画</string>
+    <string name="btn_func_none">无功能</string>
+    <string name="btn_func_next_slot">切换到下一卡槽</string>
+    <string name="btn_func_prev_slot">切换到上一卡槽</string>
+    <string name="btn_func_clone">复制 IC 卡号并模拟</string>
+    <string name="btn_func_battery">显示电量</string>
+    <string name="btn_func_fieldgen">开关 NFC 场</string>
+
+    <!-- 密钥管理（阶段 5） -->
+    <string name="keys_new_group">新建分组</string>
+    <string name="keys_new_group_title">新建密钥分组</string>
+    <string name="keys_import">导入密钥文件</string>
+    <string name="keys_builtin_badge">内置</string>
+    <string name="keys_count_fmt">%1$d 个密钥</string>
+    <string name="keys_empty">暂无密钥分组</string>
+    <string name="keys_group_empty">该分组暂无密钥</string>
+    <string name="keys_search_hint">搜索密钥 hex</string>
+    <string name="keys_add_key">添加密钥</string>
+    <string name="keys_add_key_title">添加密钥（12 位 hex）</string>
+    <string name="keys_export_group">导出为 .dic</string>
+    <string name="keys_delete_group">删除分组</string>
+    <string name="keys_delete_key">删除</string>
+    <string name="keys_import_result_fmt">导入 %1$d 个新密钥，忽略 %2$d 个重复/无效</string>
+    <string name="keys_source_uid_fmt">来源卡 %1$s</string>
+    <string name="keys_card_memory">按卡记忆</string>
+    <string name="keys_card_memory_hint">破解成功的卡密钥自动记录，同卡再次读取时优先使用</string>
+    <string name="keys_card_empty">暂无记忆的卡</string>
+    <string name="keys_card_keys_fmt">%1$d 个密钥</string>
+    <string name="keys_card_rename">设置昵称</string>
+    <string name="keys_card_delete">删除记忆</string>
+    <string name="keys_nickname_hint">昵称（可留空）</string>
+    <string name="keys_used_memory">已用记忆密钥秒开</string>
+
+    <!-- 侦测（阶段 6） -->
+    <string name="detection_entry">侦测记录</string>
+    <string name="detection_title">侦测记录</string>
+    <string name="detection_guide">在卡槽高级设置开启「侦测模式」后，用读卡器刷模拟卡，然后来这里反推读卡器密钥</string>
+    <string name="detection_load">拉取设备记录</string>
+    <string name="detection_loading">正在拉取侦测记录…</string>
+    <string name="detection_count_fmt">设备内有 %1$d 条侦测记录</string>
+    <string name="detection_empty">设备内暂无侦测记录</string>
+    <string name="detection_recover">反推密钥</string>
+    <string name="detection_recovering">反推中 %1$d/%2$d（已找到 %3$d 个）</string>
+    <string name="detection_results">反推结果</string>
+    <string name="detection_no_key">未能反推出密钥（记录不足或数据不够）</string>
+    <string name="detection_save">入库</string>
+    <string name="detection_save_all">全部入库</string>
+    <string name="detection_saved">已存入密钥库</string>
+    <string name="detection_clear">清空记录</string>
+    <string name="detection_cleared">侦测记录已清空</string>
+    <string name="detection_load_failed">拉取侦测记录失败：%1$s</string>
+    <string name="detection_recover_failed">反推失败：%1$s</string>
+    <string name="detection_record_fmt">块 %1$d · %2$s · nt=%3$s</string>
+    <string name="detection_key_fmt">UID %1$s · 块 %2$d · Key%3$s</string>
+    <string name="emu_detection_hint">开启后用读卡器刷模拟卡，再到读卡器 Tab 的「侦测记录」反推密钥</string>
+
+    <!-- 卡槽写入数据 -->
+    <string name="slot_write_data">写入数据</string>
+    <string name="write_source_dump">从数据管理选择</string>
+    <string name="write_source_file">从文件导入</string>
+
+    <!-- 设置页通用区 + 关于（阶段 7） -->
+    <string name="settings_general">通用</string>
+    <string name="settings_theme">主题</string>
+    <string name="theme_system">跟随系统</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_dark">深色</string>
+    <string name="settings_language">语言</string>
+    <string name="lang_system">跟随系统</string>
+    <string name="settings_protocol_log">记录协议日志</string>
+    <string name="settings_protocol_log_desc">内存中保留最近 500 条收发帧，用于排查连接问题</string>
+    <string name="settings_export_log">导出协议日志</string>
+    <string name="settings_export_log_empty">暂无日志</string>
+    <string name="settings_export_log_done_fmt">已导出 %1$d 条日志</string>
+    <string name="settings_about">关于</string>
+    <string name="about_title">关于 ChameleX</string>
+    <string name="about_version_fmt">版本 %1$s（%2$d）</string>
+    <string name="about_desc">ChameleonUltra RFID 设备的开源安卓客户端：读卡自动破解、侦测反推、BLE/OTG 双通道。</string>
+    <string name="about_ack_title">致谢</string>
+    <string name="about_ack_body">本项目基于 RfidResearchGroup/ChameleonUltra 官方固件协议实现，感谢 RRG 与所有贡献者。</string>
+    <string name="about_libs_title">开源组件</string>
+</resources>

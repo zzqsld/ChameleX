@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChameleX</string>
+
+    <!-- Bottom navigation -->
+    <string name="tab_reader">Reader</string>
+    <string name="tab_slots">Slots</string>
+    <string name="tab_data">Data</string>
+    <string name="tab_keys">Keys</string>
+    <string name="tab_settings">Settings</string>
+
+    <!-- Connection status bar -->
+    <string name="conn_disconnected">Disconnected</string>
+    <string name="conn_connecting">Connecting…</string>
+    <string name="conn_connecting_fmt">Connecting to %1$s…</string>
+    <string name="conn_error">Connection error</string>
+    <string name="transport_ble">BLE</string>
+    <string name="transport_usb">USB</string>
+    <string name="battery_unknown">Battery unknown</string>
+
+    <!-- Settings / connection page -->
+    <string name="settings_connection_title">Device connection</string>
+    <string name="ble_section">Bluetooth devices</string>
+    <string name="ble_scan">Scan</string>
+    <string name="ble_scan_stop">Stop scan</string>
+    <string name="ble_scanning">Scanning for Chameleon devices…</string>
+    <string name="ble_empty">No device found. Make sure the device is on and connectable</string>
+    <string name="ble_permission_required">Bluetooth permission is required to scan and connect</string>
+    <string name="usb_section">USB devices</string>
+    <string name="usb_refresh">Refresh list</string>
+    <string name="usb_empty">No USB device detected. Connect the Chameleon via OTG and refresh</string>
+    <string name="connected_device">Connected device</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="device_model">Model</string>
+    <string name="device_fw_version">Firmware</string>
+    <string name="device_git_version">Git version</string>
+    <string name="device_chip_id">Chip ID</string>
+    <string name="device_battery">Battery</string>
+    <string name="device_mode">Mode</string>
+    <string name="device_mode_reader">Reader mode</string>
+    <string name="device_mode_emulator">Emulator mode</string>
+    <string name="battery_percent_fmt">%1$d%%（%2$d mV）</string>
+    <string name="rssi_fmt">%1$d dBm</string>
+    <string name="device_info_loading">Reading device info…</string>
+    <string name="device_link_type">Link type</string>
+
+    <!-- Slot management -->
+    <string name="slots_not_connected">Please connect a device on the Settings page first</string>
+    <string name="slots_loading">Reading slot info…</string>
+    <string name="slot_title_fmt">Slot %1$d</string>
+    <string name="slot_active">Active</string>
+    <string name="slot_hf_label">HF</string>
+    <string name="slot_lf_label">LF</string>
+    <string name="slot_enabled">Enabled</string>
+    <string name="slot_disabled">Disabled</string>
+    <string name="slot_more">More</string>
+    <string name="slot_detail_title">Slot details</string>
+    <string name="slot_back">Back</string>
+    <string name="nick_modify">Edit nickname</string>
+    <string name="nick_dialog_title_fmt">Edit %1$s nickname</string>
+    <string name="nick_clear">Clear nickname</string>
+    <string name="nick_too_long">Nickname too long (max 32 bytes in UTF-8)</string>
+    <string name="delete_hf_data">Delete HF data</string>
+    <string name="delete_lf_data">Delete LF data</string>
+    <string name="delete_confirm_title">Confirm deletion</string>
+    <string name="delete_confirm_msg_fmt">Delete the %2$s configuration data of slot %1$d?</string>
+    <string name="reset_button">Reset to default tag type</string>
+    <string name="reset_pick_title">Pick tag type</string>
+    <string name="reset_confirm_title">Dangerous operation</string>
+    <string name="reset_confirm_msg_fmt">Slot %1$d will be reset to the default data of "%2$s". Existing data will be erased and written to flash. This cannot be undone!</string>
+    <string name="emu_config_entry">Advanced settings</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="op_failed_fmt">%1$s failed: %2$s</string>
+    <string name="op_read_slots">Read slots</string>
+    <string name="op_activate_slot">Switch slot</string>
+    <string name="op_set_enable">Set enabled</string>
+    <string name="op_set_nick">Edit nickname</string>
+    <string name="op_delete_sense">Delete data</string>
+    <string name="op_reset_slot">Reset slot</string>
+    <string name="op_emu_config">Configure emulation</string>
+    <string name="device_not_connected">Device not connected</string>
+
+    <!-- Emulation config page -->
+    <string name="emu_title">Advanced settings</string>
+    <string name="emu_loading">Reading emulation config…</string>
+    <string name="emu_unsupported">This slot has no configurable emulation parameters</string>
+    <string name="emu_gen1a">Emulate as UID card</string>
+    <string name="emu_gen1a_desc">Gen1A magic mode: allows rewriting card data via Gen1A backdoor commands</string>
+    <string name="emu_gen2">Emulate as CUID card</string>
+    <string name="emu_gen2_desc">Block0 (UID block) can be written like a normal block</string>
+    <string name="emu_anticoll">Anti-UID detection</string>
+    <string name="emu_anticoll_desc">The UID reported during anti-collision is taken directly from block 0, always matching the UID read after authentication — fools advanced readers that compare the two</string>
+    <string name="emu_write_mode">Write mode</string>
+    <string name="write_mode_normal">Normal write</string>
+    <string name="write_mode_normal_desc">Standard behavior: writes take effect immediately</string>
+    <string name="write_mode_denied">Read-only lock</string>
+    <string name="write_mode_denied_desc">Reject all writes, emulating a read-only card</string>
+    <string name="write_mode_deceive">Deceive writes</string>
+    <string name="write_mode_deceive_desc">Fools readers that test writability before trusting a card — reports success without saving</string>
+    <string name="write_mode_shadow">Temporary write (restore on power loss)</string>
+    <string name="write_mode_shadow_desc">Writes stay in RAM only; original data returns after power loss</string>
+    <string name="emu_uid_magic">Emulate Ultralight magic card</string>
+    <string name="emu_uid_magic_desc">Allows changing the card UID (Ultralight/NTAG family)</string>
+    <string name="emu_detection">Detection mode</string>
+    <string name="emu_detection_desc">Logs reader authentication attempts against the emulated card for later key recovery</string>
+    <string name="emu_apply_failed_fmt">Apply failed: %1$s</string>
+
+    <!-- Tag type display names -->
+    <string name="tag_type_empty">Empty</string>
+    <string name="tag_type_unknown">Unknown</string>
+    <string name="tag_type_old">Legacy tag type, firmware upgrade required</string>
+    <string name="tag_type_em410x">EM410X</string>
+    <string name="tag_type_em410x_16">EM410X/16</string>
+    <string name="tag_type_em410x_32">EM410X/32</string>
+    <string name="tag_type_em410x_64">EM410X/64</string>
+    <string name="tag_type_em410x_electra">EM410X Electra</string>
+    <string name="tag_type_pac">PAC/Stanley</string>
+    <string name="tag_type_viking">Viking</string>
+    <string name="tag_type_jablotron">Jablotron</string>
+    <string name="tag_type_hidprox">HIDProx</string>
+    <string name="tag_type_ioprox">ioProx</string>
+    <string name="tag_type_idteck">IDTECK</string>
+    <string name="tag_type_mifare_mini">MIFARE Mini</string>
+    <string name="tag_type_mifare_1024">MIFARE Classic 1K</string>
+    <string name="tag_type_mifare_2048">MIFARE Classic 2K</string>
+    <string name="tag_type_mifare_4096">MIFARE Classic 4K</string>
+    <string name="tag_type_ntag213">NTAG 213</string>
+    <string name="tag_type_ntag215">NTAG 215</string>
+    <string name="tag_type_ntag216">NTAG 216</string>
+    <string name="tag_type_ntag210">NTAG 210</string>
+    <string name="tag_type_ntag212">NTAG 212</string>
+    <string name="tag_type_mful">MIFARE Ultralight</string>
+    <string name="tag_type_mfulc">MIFARE Ultralight C</string>
+    <string name="tag_type_mful11">MIFARE Ultralight EV1 (640bit)</string>
+    <string name="tag_type_mful21">MIFARE Ultralight EV1 (1312bit)</string>
+    <string name="tag_type_hf14a_4">ISO14443-4 (T=CL)</string>
+    <string name="tag_type_seos">SEOS</string>
+
+    <!-- Reader -->
+    <string name="reader_scan_start">Start scan</string>
+    <string name="reader_scanning">Scanning, hold the card near the device… (IC card on LED side, ID card on button side)</string>
+    <string name="reader_scan_hint">IC cards (13.56MHz) read on the LED side; ID cards (125kHz) read on the button side. Wrong side reads nothing</string>
+    <string name="reader_no_tag">No card found, try again (IC card on LED side, ID card on button side)</string>
+    <string name="reader_not_connected">Please connect a device on the Settings page first</string>
+    <string name="reader_result_title">Scan result</string>
+    <string name="reader_uid">UID</string>
+    <string name="reader_card_type">Card type</string>
+    <string name="reader_lf_id">ID</string>
+    <string name="reader_hid_format">Format</string>
+    <string name="reader_hid_fc">FC (facility code)</string>
+    <string name="reader_hid_cn">CN (card number)</string>
+    <string name="reader_hid_bits_fmt">%1$s (%2$d-bit)</string>
+    <string name="card_kind_mfc_1k">MIFARE Classic 1K</string>
+    <string name="card_kind_mfc_4k">MIFARE Classic 4K</string>
+    <string name="card_kind_mfc_mini">MIFARE Classic Mini</string>
+    <string name="card_kind_ul_ntag">Ultralight / NTAG family</string>
+    <string name="card_kind_cpu">ISO14443-4 / CPU card</string>
+    <string name="card_kind_unknown_14a">Unknown 14A card</string>
+    <string name="card_hint_mfc">Auto-decryption supported (coming soon)</string>
+    <string name="card_hint_ul_ntag">No auto-decryption for this type, but emulation is supported</string>
+    <string name="card_hint_cpu">No auto-decryption for this type</string>
+    <string name="card_hint_14b_15693">Note: 14B/15693 cards are not supported by the device firmware</string>
+    <string name="scan_failed_fmt">Scan failed: %1$s</string>
+    <string name="scan_lite_no_reader">This device (Lite) does not support reader mode</string>
+
+    <!-- Dictionary attack / dump -->
+    <string name="attack_button">Check keys &amp; read card</string>
+    <string name="attack_pick_dict">Pick dictionary</string>
+    <string name="attack_quick">Quick check (top 50 common keys)</string>
+    <string name="attack_full">Full dictionary (all keys, slower)</string>
+    <string name="attack_stage_check">Checking keys, do not move the card…</string>
+    <string name="attack_stage_dump">Reading card data, do not move the card…</string>
+    <string name="attack_progress_keys">Checked %1$d/%2$d keys</string>
+    <string name="attack_progress_found">%1$d keys found</string>
+    <string name="attack_progress_blocks">Read %1$d/%2$d blocks</string>
+    <string name="attack_elapsed">Elapsed %1$d s</string>
+    <string name="attack_eta_fmt">This stage takes at most about %1$d s</string>
+    <string name="attack_cancel">Cancel</string>
+    <string name="attack_waiting_device">Device is checking this key batch (the white LED blinks during checks — normal)…</string>
+    <string name="attack_cancelled">Cancelled</string>
+    <string name="attack_card_lost">Card left the field. Put it back and retry</string>
+    <string name="attack_failed">Read failed: %1$s</string>
+    <string name="attack_result_title">Read result</string>
+    <string name="attack_sector_keys">Sector keys</string>
+    <string name="attack_dump_blocks">Card data</string>
+    <string name="key_unknown">Unknown</string>
+    <string name="sector_fmt">Sector %1$d</string>
+    <string name="block_fmt">Block %1$d</string>
+    <string name="dump_saved">Saved to Data</string>
+    <string name="dump_save_failed">Save failed</string>
+    <string name="dump_saved_mark">Saved</string>
+
+    <!-- Data management -->
+    <string name="data_empty">No saved dumps</string>
+    <string name="data_source_dict_attack">Dictionary attack</string>
+    <string name="data_source_import">Import</string>
+    <string name="data_time_fmt">%1$tY-%1$tm-%1$td %1$tH:%1$tM</string>
+    <string name="data_detail_title">Dump preview</string>
+    <string name="data_source_label">Source</string>
+    <string name="data_time_label">Time</string>
+    <string name="data_delete">Delete</string>
+    <string name="data_block_count_fmt">%1$d blocks</string>
+    <string name="mfc_type_1k">MIFARE Classic 1K</string>
+    <string name="mfc_type_4k">MIFARE Classic 4K</string>
+    <string name="mfc_type_mini">MIFARE Classic Mini</string>
+    <string name="mfc_type_2k">MIFARE Classic 2K</string>
+    <string name="mfc_type_unknown">MIFARE Classic</string>
+
+    <!-- Autopwn -->
+    <string name="autopwn_button">One-tap auto decrypt</string>
+    <string name="autopwn_stage_dict">Stage 1/4: dictionary check</string>
+    <string name="autopwn_stage_darkside">Darkside first key (round %1$s)</string>
+    <string name="autopwn_stage_nested">Nested sector %1$s</string>
+    <string name="autopwn_stage_staticnested">StaticNested sector %1$s</string>
+    <string name="autopwn_stage_hardnested">HardNested brute force %1$s</string>
+    <string name="autopwn_stage_hn_acquire">HardNested collecting nonces, MSB %1$s</string>
+    <string name="autopwn_stage_cracking">Cracking remaining keys</string>
+    <string name="autopwn_stage_dump">Reading card data %1$s</string>
+    <string name="autopwn_keys_progress">Keys cracked %1$d/%2$d</string>
+    <string name="autopwn_attempts">Attempts %1$d</string>
+    <string name="autopwn_not_m1">Only MIFARE Classic cards are supported</string>
+    <string name="autopwn_no_first_key">Could not get the first key (non-default keys and Darkside failed). Try the full dictionary</string>
+    <string name="autopwn_darkside_fail">Darkside failed: %1$s</string>
+    <string name="autopwn_cancelled">Cancelled</string>
+
+    <!-- Firmware update (DFU) -->
+    <string name="fw_entry">Firmware update</string>
+    <string name="fw_title">Firmware update</string>
+    <string name="fw_current_device">Current device</string>
+    <string name="fw_dfu_device_badge">Recovery mode</string>
+    <string name="fw_source_github">Fetch from official GitHub repo</string>
+    <string name="fw_source_local">Pick a local firmware package (.zip)</string>
+    <string name="fw_load_release">Fetch latest release info</string>
+    <string name="fw_release_version">Latest version: %1$s</string>
+    <string name="fw_release_date">Published: %1$s</string>
+    <string name="fw_release_notes">Release notes</string>
+    <string name="fw_download">Download firmware (%1$s)</string>
+    <string name="fw_downloading">Downloading %1$d%% (%2$.1f / %3$.1f MB)</string>
+    <string name="fw_download_cancel">Cancel download</string>
+    <string name="fw_file_ready">Firmware ready: %1$s</string>
+    <string name="fw_flash_button">Start flashing</string>
+    <string name="fw_flash_dfu_button">Flash firmware</string>
+    <string name="fw_exit_dfu">Exit recovery mode</string>
+    <string name="fw_exit_dfu_hint">If the device does not reboot itself, press its power button to exit recovery mode</string>
+    <string name="fw_confirm_title">Confirm flashing risk</string>
+    <string name="fw_confirm_msg">About to flash new firmware:\n\n· Current: %1$s\n· Target: %2$s\n\nDo not power off, move away, or press device buttons during flashing. Failed flashes are usually recoverable. Continue?</string>
+    <string name="fw_enter_bootloader">Rebooting device into recovery mode…</string>
+    <string name="fw_waiting_dfu">Waiting for the device to enter recovery mode (CU/CL)…</string>
+    <string name="fw_flashing">Flashing firmware. Stay on this page and keep the device powered</string>
+    <string name="fw_progress_part">Part %1$d/%2$d</string>
+    <string name="fw_progress_speed">Speed %1$.1f KB/s</string>
+    <string name="fw_done">Flashing complete! The device is rebooting — reconnect on the Settings page</string>
+    <string name="fw_aborted">Flashing aborted. The device has reset; you can flash again</string>
+    <string name="fw_cancel_flash">Abort flashing</string>
+    <string name="fw_back">Back</string>
+    <string name="dfu_not_found">No recovery-mode device found. Reboot the device manually and retry</string>
+    <string name="dfu_enter_failed">Failed to enter recovery mode: %1$s</string>
+    <string name="fw_error_fmt">Flashing failed: %1$s</string>
+    <string name="fw_need_device">Connect a device first, or pick a recovery-mode device on the Settings page</string>
+
+    <!-- Data management (stage 4) -->
+    <string name="import_dump">Import dump</string>
+    <string name="import_success">Import succeeded</string>
+    <string name="import_failed">Import failed (unsupported format or corrupted file)</string>
+    <string name="export_dump">Export</string>
+    <string name="export_format_title">Pick export format</string>
+    <string name="rename">Rename</string>
+    <string name="rename_dialog_title">Rename</string>
+    <string name="data_source_crack">Detection crack</string>
+    <string name="data_source_scan">Scan</string>
+    <string name="write_to_slot">Save to device slot</string>
+    <string name="write_to_slot_title">Pick target slot</string>
+    <string name="write_slot_progress">Writing slot %1$d/%2$d blocks</string>
+    <string name="write_lf_progress">Writing slot</string>
+    <string name="write_card_progress">Writing card %1$d/%2$d blocks</string>
+    <string name="write_failed">Write failed: %1$s</string>
+    <string name="write_done_ok">Write complete, read-back verified</string>
+    <string name="write_done_mismatch_fmt">Write complete, %1$d blocks failed verification</string>
+    <string name="write_magic_card">Write to physical magic card</string>
+    <string name="magic_pick_title">Pick magic card type</string>
+    <string name="magic_gen1a">Gen1A (backdoor card, e.g. CUID)</string>
+    <string name="magic_gen2">Gen2 (direct block write, e.g. FUID/UFUID)</string>
+    <string name="magic_danger_title">Dangerous operation</string>
+    <string name="magic_danger_msg">This overwrites a physical card and may brick it!\n\nPlease confirm:\n· The card is on the device field (LED side)\n· The card is a writable magic card\n· Do not move the card while writing</string>
+    <string name="edit_invalid_hex">Must be exactly 32 hex characters</string>
+    <string name="block0_badge">Manufacturer block/UID</string>
+    <string name="common_save">Save</string>
+    <string name="common_ok">OK</string>
+    <string name="save_to_data">Save to Data</string>
+    <string name="save_to_slot">Save to device slot</string>
+    <string name="lf_write_done">ID written to the current slot</string>
+    <string name="lf_saved">Saved to Data</string>
+
+    <!-- Hardware settings -->
+    <string name="hw_section">Hardware settings</string>
+    <string name="hw_animation">Animation mode</string>
+    <string name="hw_btn_a_short">Button A short press</string>
+    <string name="hw_btn_b_short">Button B short press</string>
+    <string name="hw_btn_a_long">Button A long press</string>
+    <string name="hw_btn_b_long">Button B long press</string>
+    <string name="anim_full">Full animation</string>
+    <string name="anim_minimal">Minimal animation</string>
+    <string name="anim_none">No animation</string>
+    <string name="anim_symmetric">Symmetric animation</string>
+    <string name="btn_func_none">No function</string>
+    <string name="btn_func_next_slot">Next slot</string>
+    <string name="btn_func_prev_slot">Previous slot</string>
+    <string name="btn_func_clone">Clone IC card number and emulate</string>
+    <string name="btn_func_battery">Show battery level</string>
+    <string name="btn_func_fieldgen">Toggle NFC field generator</string>
+
+    <!-- Key management -->
+    <string name="keys_new_group">New group</string>
+    <string name="keys_new_group_title">New key group</string>
+    <string name="keys_import">Import key file</string>
+    <string name="keys_builtin_badge">Built-in</string>
+    <string name="keys_count_fmt">%1$d keys</string>
+    <string name="keys_empty">No key groups</string>
+    <string name="keys_group_empty">No keys in this group</string>
+    <string name="keys_search_hint">Search key hex</string>
+    <string name="keys_add_key">Add key</string>
+    <string name="keys_add_key_title">Add key (12 hex chars)</string>
+    <string name="keys_export_group">Export as .dic</string>
+    <string name="keys_delete_group">Delete group</string>
+    <string name="keys_delete_key">Delete</string>
+    <string name="keys_import_result_fmt">Imported %1$d new keys, skipped %2$d duplicates/invalid</string>
+    <string name="keys_source_uid_fmt">From card %1$s</string>
+    <string name="keys_card_memory">Card memory</string>
+    <string name="keys_card_memory_hint">Keys of cracked cards are remembered automatically and used first on the next read</string>
+    <string name="keys_card_empty">No remembered cards</string>
+    <string name="keys_card_keys_fmt">%1$d keys</string>
+    <string name="keys_card_rename">Set nickname</string>
+    <string name="keys_card_delete">Delete memory</string>
+    <string name="keys_nickname_hint">Nickname (optional)</string>
+    <string name="keys_used_memory">Opened instantly with remembered keys</string>
+
+    <!-- Detection -->
+    <string name="detection_entry">Detection log</string>
+    <string name="detection_title">Detection log</string>
+    <string name="detection_guide">Enable "Detection mode" in slot advanced settings, tap the emulated card with a reader, then come back here to recover the reader key</string>
+    <string name="detection_load">Pull device records</string>
+    <string name="detection_loading">Pulling detection records…</string>
+    <string name="detection_count_fmt">%1$d detection records on device</string>
+    <string name="detection_empty">No detection records on device</string>
+    <string name="detection_recover">Recover keys</string>
+    <string name="detection_recovering">Recovering %1$d/%2$d (found %3$d)</string>
+    <string name="detection_results">Recovery results</string>
+    <string name="detection_no_key">No key recovered (not enough records or data)</string>
+    <string name="detection_save">Save</string>
+    <string name="detection_save_all">Save all</string>
+    <string name="detection_saved">Saved to key library</string>
+    <string name="detection_clear">Clear records</string>
+    <string name="detection_cleared">Detection records cleared</string>
+    <string name="detection_load_failed">Failed to pull records: %1$s</string>
+    <string name="detection_recover_failed">Recovery failed: %1$s</string>
+    <string name="detection_record_fmt">Block %1$d · %2$s · nt=%3$s</string>
+    <string name="detection_key_fmt">UID %1$s · Block %2$d · Key%3$s</string>
+    <string name="emu_detection_hint">After enabling, tap the emulated card with a reader, then recover keys in "Detection log" on the Reader tab</string>
+
+    <!-- Slot write data -->
+    <string name="slot_write_data">Write data</string>
+    <string name="write_source_dump">Pick from Data</string>
+    <string name="write_source_file">Import from file</string>
+
+    <!-- General settings + About -->
+    <string name="settings_general">General</string>
+    <string name="settings_theme">Theme</string>
+    <string name="theme_system">Follow system</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="settings_language">Language</string>
+    <string name="lang_system">Follow system</string>
+    <string name="settings_protocol_log">Log protocol traffic</string>
+    <string name="settings_protocol_log_desc">Keeps the last 500 frames in memory for troubleshooting connection issues</string>
+    <string name="settings_export_log">Export protocol log</string>
+    <string name="settings_export_log_empty">No log entries</string>
+    <string name="settings_export_log_done_fmt">Exported %1$d log entries</string>
+    <string name="settings_about">About</string>
+    <string name="about_title">About ChameleX</string>
+    <string name="about_version_fmt">Version %1$s (%2$d)</string>
+    <string name="about_desc">An open-source Android client for the ChameleonUltra RFID device: auto-cracking, detection recovery, BLE/OTG dual channel.</string>
+    <string name="about_ack_title">Acknowledgements</string>
+    <string name="about_ack_body">Built on the official RfidResearchGroup/ChameleonUltra firmware protocol. Thanks to RRG and all contributors.</string>
+    <string name="about_libs_title">Open source components</string>
+</resources>

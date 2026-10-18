@@ -1,0 +1,22 @@
+# 本地参考代码与密钥字典不进版本库
+_reference/
+dictionaries/
+
+# 本地测试卡截图及开发计划不公开
+Screenshot_*.jpg
+ChameleonUltra新APP分阶段开发实施文档.md
+
+# Gradle / 构建输出
+.gradle/
+build/
+**/build/
+local.properties
+
+# IDE
+.idea/
+*.iml
+.cxx/
+
+# 系统
+.DS_Store
+Thumbs.db

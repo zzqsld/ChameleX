@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 匹配所有 USB 设备，由 usb-serial-for-android 的 prober 进一步筛选 -->
+    <usb-device />
+</resources>
